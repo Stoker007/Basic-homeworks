@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class MainApplication {
     public static void main(String[] args) {
-        while (true) {// Добавлен цикл для проверки всех методов домашнего задания
+        while (true) {// Добавлен цикл для проверки всех методов домашнего задания за один раз
             Scanner scanner = new Scanner(System.in);
             System.out.println();
             System.out.println("Введите число от 1 до 5 для выбора метода");
@@ -41,18 +41,16 @@ public class MainApplication {
                 int d = scanner.nextInt();
                 System.out.println("Введите второе число");
                 int e = scanner.nextInt();
-                //} Не смог реализовать через диалог, не уверен что можно закидывать boolean как аргумент
-                // System.out.println("Сложить эти числа? (1 - да, 2 - нет");
-                //int f = scanner.nextInt();
-                //boolean increment1;
-                // if (f == 1) {
-                //    increment1 = true;
-                //}
-                //if (f == 2) {
-                //    increment1 = false;
-
-
-                addOrSubtractAndPrint(d, e, true);
+                System.out.println("Сложить эти числа? (1 - да, 2 - нет)");
+                int f = scanner.nextInt();
+                boolean increment1 = true;
+                if (f == 1) {
+                increment1 = true;
+                }
+                if (f == 2) {
+                    increment1 = false;
+                }
+                addOrSubtractAndPrint(d, e, increment1);
             }
             if (result == 0) {
                 break;
@@ -106,8 +104,10 @@ public class MainApplication {
 
     public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) { // Метод №5 "Сумма или разность"
         if (increment) {
+            System.out.print("Сумма чисел ");
             System.out.println(initValue + delta);
         } else {
+            System.out.print("Разность чисел ");
             System.out.println(initValue - delta);
         }
     }
