@@ -45,7 +45,7 @@ public class MainApplication {
                 int f = scanner.nextInt();
                 boolean increment1 = true;
                 if (f == 1) {
-                increment1 = true;
+                    increment1 = true;
                 }
                 if (f == 2) {
                     increment1 = false;
