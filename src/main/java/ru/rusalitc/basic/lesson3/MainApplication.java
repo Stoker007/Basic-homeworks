@@ -1,6 +1,5 @@
 package ru.rusalitc.basic.lesson3;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class MainApplication {
@@ -45,12 +44,13 @@ public class MainApplication {
                 int f = scanner.nextInt();
                 boolean increment1 = true;
                 if (f == 1) {
-                    increment1 = true;
-                }
+                    addOrSubtractAndPrint(d, e, increment1);
+                                    }
                 if (f == 2) {
                     increment1 = false;
+                    addOrSubtractAndPrint(d, e, increment1);
                 }
-                addOrSubtractAndPrint(d, e, increment1);
+
             }
             if (result == 0) {
                 break;
